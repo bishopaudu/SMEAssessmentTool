@@ -118,7 +118,11 @@ const AssessmentFormPage = () => {
 
   return (
     <div className="main">
-      <div className="progress-bar">
+      <div className="welcome-text">
+        <h2>Welcome to the SMEs AI Readiness Assessment!</h2>
+        <p>Answer the following questions to see how prepared your organization is to adopt AI and data-driven solutions.</p>
+      </div>
+      <div className="progress-bar-container">
         <div
           className="progress"
           style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
