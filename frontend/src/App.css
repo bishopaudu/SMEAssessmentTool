@@ -94,7 +94,13 @@
   justify-content: center;
   align-items: center;
 }
+.custom-outline {
+  border-color: #ffffff !important; /* White outline */
+}
 
+.custom-outline:hover {
+  border-color: #ffffff !important; /* Ensure hover state is white as well */
+}
 
 
 

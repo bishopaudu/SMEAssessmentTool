@@ -68,44 +68,67 @@ function App() {
       <Hero />
 
       {/* Admin Login Modal */}
-      <Modal isOpen={adminModalOpen}
-      contentLabel="Get Started Modal"
-      className="custom-modal"
-      overlayClassName="modal-overlay"
-       onRequestClose={closeAdminModal} >
-        <DialogContent style={{color:"white"}}>
-          <TextField
-            autoFocus
-            margin="dense"
-            label="Email Address"
-            type="email"
-            fullWidth
-            variant="outlined"
-            onChange={(e) => setAdminUsername(e.target.value)} 
-          />
-          <TextField
-            margin="dense"
-            label="Password"
-            type="password"
-            fullWidth
-            variant="outlined"
-            onChange={(e) => setAdminPassword(e.target.value)} 
-          />
-         {error && <Typography color="error" style={{ marginTop: 10 }}>{error}</Typography>}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={closeAdminModal} style={{color:'#003366'}}>
-            Cancel
-          </Button>
-          <button
-            className='admin-login'
-            onClick={adminLogin}
-            disabled={loading}
-          >
-            {loading ? <CircularProgress size={24} /> : 'Login'}
-          </button>
-        </DialogActions>
-      </Modal>
+      <Modal
+  isOpen={adminModalOpen}
+  contentLabel="Get Started Modal"
+  className="custom-modal"
+  overlayClassName="modal-overlay"
+  onRequestClose={closeAdminModal}
+>
+  <DialogContent>
+    <TextField
+      autoFocus
+      margin="dense"
+      label="Email Address"
+      type="email"
+      fullWidth
+      variant="outlined"
+      color='secondary'
+      onChange={(e) => setAdminUsername(e.target.value)} 
+      InputLabelProps={{
+        style: { color: '#ffffff' },
+      }}
+      InputProps={{
+        style: { color: '#ffffff' },
+        classes: {
+          notchedOutline: 'custom-outline',
+        },
+      }}
+    />
+    <TextField
+      margin="dense"
+      label="Password"
+      type="password"
+      fullWidth
+      variant="outlined"
+      color='primary'
+      onChange={(e) => setAdminPassword(e.target.value)} 
+      InputLabelProps={{
+        style: { color: '#ffffff' },
+      }}
+      InputProps={{
+        style: { color: '#ffffff' },
+        classes: {
+          notchedOutline: 'custom-outline',
+        },
+      }}
+    />
+    {error && <Typography color="error" style={{ marginTop: 10 }}>{error}</Typography>}
+  </DialogContent>
+  <DialogActions>
+    <Button onClick={closeAdminModal} style={{ color: '#003366' }}>
+      Cancel
+    </Button>
+    <button
+      className='admin-login'
+      onClick={adminLogin}
+      disabled={loading}
+    >
+      {loading ? <CircularProgress size={24} /> : 'Login'}
+    </button>
+  </DialogActions>
+</Modal>
+
     </div>
   );
 }
