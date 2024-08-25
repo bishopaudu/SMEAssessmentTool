@@ -113,8 +113,9 @@
   }
   
   .welcome-text p {
-    color: #cccccc; /* Match the hero subtext color */
+    /*color: #cccccc;*/ /* Match the hero subtext color */
     font-size: 16px;
+    color: #002147;
   }
   
   .progress-bar-container {
