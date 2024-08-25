@@ -47,7 +47,7 @@ const AssessmentFormPage = () => {
     }
   };
 
- /* const handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formattedAnswers = Object.entries(answers).map(([questionId, selectedOption]) => ({
       questionId,
@@ -60,8 +60,8 @@ const AssessmentFormPage = () => {
     } catch (error) {
       console.error(`this is the error  ${error}`);
     }
-  };*/
-  const handleSubmit = async (event) => {
+  };
+ /* const handleSubmit = async (event) => {
     event.preventDefault();
   
     // Format answers into an array of { questionId, selectedOption }
@@ -77,9 +77,9 @@ const AssessmentFormPage = () => {
     } catch (error) {
       console.error('Error submitting assessment:', error);
     }
-  };
+  };*/
   
-
+  const isNextDisabled = !answers[questions[currentQuestionIndex]?._id];
   if (isSubmitted) {
     return (
       <div className="main">
@@ -122,7 +122,7 @@ const AssessmentFormPage = () => {
             Back
           </button>
           {currentQuestionIndex < questions.length - 1 ? (
-            <button type="button" className="next-button" onClick={handleNext}>
+            <button type="button" className="next-button" onClick={handleNext} disabled={isNextDisabled}>
               Next
             </button>
           ) : (

@@ -108,12 +108,13 @@ const QuestionList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/questions/${id}`, {
+      await axios.delete(`http://localhost:5000/api/questions/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       setQuestions(questions.filter((q) => q._id !== id));
+      alert('Question deleted successfully!');
     } catch (error) {
       console.error('Error deleting question:', error);
     }
@@ -134,6 +135,9 @@ const QuestionList = () => {
           {open ? 'View Less Questions' : 'View All Questions'}
         </Button>
       </Box>
+      <Typography variant="subtitle1" gutterBottom>
+        Total Questions: {questions.length}
+      </Typography>
       <Collapse in={open}>
         <List>
           {questions.map((question) => (

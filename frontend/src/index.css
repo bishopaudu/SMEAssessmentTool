@@ -5,8 +5,9 @@ body, html, .app, .hero-section {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #1c1c1c; /* Dark background */
-  color: #ffffff;
+  /*background-color: #1c1c1c;  Dark background */
+  background-color: #ffffff; 
+  /*color: #ffffff;*/
   font-family: Arial, sans-serif;
 }
 

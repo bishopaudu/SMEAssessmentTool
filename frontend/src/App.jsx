@@ -65,7 +65,9 @@ function App() {
         </button>
       </div>
 
-      <Hero />
+      <div style={{ marginTop: '-20px' }}> 
+        <Hero />
+      </div>
 
       {/* Admin Login Modal */}
       <Modal

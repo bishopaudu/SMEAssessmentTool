@@ -24,10 +24,10 @@ const Hero = () => {
         <h2 className='main-text'>Unlocking The Full Potential Of SMEs</h2>
         <h3 className='sub-text'>Grow With Technology</h3>
         <div className='type-wrapper'>
-          <h3>Unleash The Power Of</h3>
+          <h3 className='sub-text2'>Unleash The Power Of</h3>
           <TypeAnimation
             className='type-animation'
-            sequence={['AI', 1000, 'Big Data', 1000, 'Data Driven Systems', 1000]}
+            sequence={['AI', 1000, 'Big Data', 1000, 'Machine Learning', 1000]}
             wrapper="span"
             speed={50}
             repeat={Infinity}

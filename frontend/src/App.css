@@ -1,53 +1,36 @@
-
-/*.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-}
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
-}
-.header {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #00fa9a;
-}*/
-
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
+/* Adjust the navbar */
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 10px;
-  /*background-color: #101010;*/
+  margin-bottom: 10px; /* Add some space below the navbar */
 }
 
 .header {
   font-size: 2.5em;
-  color: #00bfff;
+  /*color: #00bfff;*/
+  color:#1c1c1c;
+  display: flex;
+  align-items: center;
 }
 
-.admin-button{
+.admin-button {
   background-color: #003366;
-  color: #ffffff; 
+  color: #ffffff;
   border: none;
   border-radius: 50px;
-  padding: 15px 40px;
-  font-size: 1.3em;
+  padding: 12px 30px;
+  font-size: 1.1em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 128, 0.5);
@@ -58,49 +41,68 @@
   transform: translateY(-3px);
 }
 
+/* Adjust modal */
 .admin-login {
   background-color: #003366;
-  color: #ffffff; 
+  color: #ffffff;
   border: none;
   border-radius: 20px;
-  padding: 15px 40px;
-  font-size: 1.3em;
+  padding: 10px 30px;
+  font-size: 1.2em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 128, 0.5);
 }
 
 .custom-modal {
-  background-color: #1c1c1c;
+  background-color: #ffffff;
   color: #ffffff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 12px;
   max-width: 600px;
   margin: auto;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   transform: scale(0.9);
-  animation: popIn 0.4s forwards;
 }
 
 .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  /*background-color: rgba(0, 0, 0, 0.8);*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.custom-outline {
-  border-color: #ffffff !important; /* White outline */
+
+/* Ensure responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 1.8em;
+  }
+
+  .admin-button {
+    padding: 10px 25px;
+    font-size: 1em;
+  }
+
+  .hero-container {
+    padding: 10px;
+  }
+
+  .admin-login {
+    padding: 10px 25px;
+    font-size: 1.1em;
+  }
+
+  .custom-modal {
+    padding: 20px;
+  }
 }
 
-.custom-outline:hover {
-  border-color: #ffffff !important; /* Ensure hover state is white as well */
-}
 
 
 

@@ -38,9 +38,10 @@ exports.deleteQuestion = async (req, res) => {
     if (!question) {
       return res.status(404).json({ message: 'Question not found' });
     }
-    await question.remove();
+    await Question.findByIdAndDelete(req.params.id);
     res.json({ message: 'Question removed' });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: 'Server Error' });
   }
 };
